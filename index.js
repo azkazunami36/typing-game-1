@@ -2,7 +2,7 @@ var q = [..."abcdefghijklmnopqrstuvwxyz"];
 const config = {
     time: 30, //ゲームの制限時間
     roundtime: 2 //キー入力の待機時間
-}
+};
 var round = 0, win = 0, lose = 0, keyname, keyNo = 0, gametime = config.time, keyreaction = true, roundtime = config.roundtime * 10; //初期化
 addEventListener('keydown', e => { //キーが押されたら...
     var key = e.key; //e.keyの内容をeに格納
@@ -26,7 +26,7 @@ const start = () => { //スタート関数
     var gametimer = setInterval(() => { //gametimerのタイマーを作成
         if (gametime == 0) { //gametimeが0になったら...
             console.log("終了"); //終了を伝えるログ
-            keyreaction = false; //キー反応が可能化動画を判定するための変数
+            keyreaction = false; //キー反応が可能かどうかを判定するための変数
             clearInterval(gametimer); //タイマーを止める
             clearInterval(roundtimer); //タイマーを止める
             document.getElementById("start").innerHTML = "ゲーム終了！"; //ゲーム終了をUIを表示する
