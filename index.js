@@ -46,15 +46,12 @@ const start = () => { //スタート関数
         document.getElementById("roundtime").innerHTML = roundtime / 10; //待機時間を表示(整数を割ることで正確な時間表現を実現)
     }, 100); //タイマーの周期
 };
-const scoreset = () => { //scoreset関数
-    document.getElementById("win").innerHTML = win; //勝利数を表示
-    document.getElementById("lose").innerHTML = lose; //敗北数を表示
-    document.getElementById("round").innerHTML = round; //ラウンドを表示
-};
 const roundset = () => { //roundset関数
     keyname = q[Math.floor(Math.random() * (q.length))]; //keynameにqの中からランダムに文字を入れる
     console.log("keyname:" + keyname); //入れられた文字をログに出力
     round++; //roundの数を増やす
     document.getElementById("start").innerHTML = keyname; //文字を表示
-    scoreset(); //スコアたちを反映する関数を実行
+    document.getElementById("win").innerHTML = win; //勝利数を表示
+    document.getElementById("lose").innerHTML = lose; //敗北数を表示
+    document.getElementById("round").innerHTML = round; //ラウンドを表示
 };
